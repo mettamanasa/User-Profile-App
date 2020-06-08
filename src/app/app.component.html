@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Welcome To StatusCode Weekly Company</h2>
+    <p class="long-copy">
+      A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of
+      things.<br>
+      For more information visit : <a href="#">http://statuscode.org/</a>
+    </p>
+    <button class="btn" (click)="getData()">Fetch Profiles</button>
+    <div class="card" *ngFor="let item of user">
+      <div class="plan-box">
+        <img class="card-img-top" src="{{ item.avatar }}" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">{{ item.first_name }} {{ item.last_name}}</h4>
+          <p class="card-sub-title"><span>Email:</span>{{ item.email }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
